@@ -1,0 +1,214 @@
+@import "https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,500,600";
+body,
+input,
+select,
+textarea,
+button {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 12.5px;
+}
+
+/**
+ * Formularios
+ */
+
+.Input {
+    padding: 8px;
+    border: 1px solid rgb(218, 218, 218);
+    border-radius: 3px;
+    box-sizing: border-box;
+    width: 100%;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+.Input:hover {
+    border: 1px solid rgb(200, 200, 200);
+}
+
+.Input:focus {
+    border: 1px solid rgb(185, 185, 185);
+    outline: none;
+    cursor: initial;
+}
+
+.Input:active {}
+
+select.Input {}
+
+.Button {
+    background: rgb(247, 247, 247);
+    background: -moz-linear-gradient(45deg, rgba(247, 247, 247, 1) 0%, rgba(242, 242, 242, 1) 100%);
+    background: -webkit-linear-gradient(45deg, rgba(247, 247, 247, 1) 0%, rgba(242, 242, 242, 1) 100%);
+    background: linear-gradient(to bottom, rgba(247, 247, 247, 1) 0%, rgba(242, 242, 242, 1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f7f7f7', endColorstr='#f2f2f2', GradientType=0);
+    padding: 6px 20px 8px 20px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    cursor: pointer;
+    opacity: .8;
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, .1), inset 0px -1px 0px rgba(0, 0, 0, .3), inset 0px 1px 0px rgba(255, 255, 255, .3);
+    color: rgb(58, 58, 58);
+    position: relative;
+}
+
+.Button.Primary {
+    background: #80abcc;
+    background: -moz-linear-gradient(45deg, #80abcc 0%, #0073cc 100%);
+    background: -webkit-linear-gradient(45deg, #80abcc 0%, #0073cc 100%);
+    background: linear-gradient(to bottom, #80abcc 0%, #0073cc 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#80abcc', endColorstr='#0073cc', GradientType=0);
+    border: 1px solid #0073cc;
+    color: #fff;
+    text-shadow: 0px 1px 1px rgba(0, 0, 0, .3);
+}
+
+.Button.Secondary {
+    background: rgb(255, 255, 255);
+    border: 1px solid rgb(226, 226, 226);
+    color: rgb(88, 88, 88)
+}
+
+.Button.Warning {
+    background: rgb(239, 212, 177);
+    background: -moz-linear-gradient(45deg, rgba(239, 212, 177, 1) 0%, rgba(242, 189, 116, 1) 100%);
+    background: -webkit-linear-gradient(45deg, rgba(239, 212, 177, 1) 0%, rgba(242, 189, 116, 1) 100%);
+    background: linear-gradient(to bottom, rgba(239, 212, 177, 1) 0%, rgba(242, 189, 116, 1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#efd4b1', endColorstr='#f2bd74', GradientType=0);
+    border: 1px solid #F49B1D;
+}
+
+.Button.Danger {
+    background: rgb(175, 102, 102);
+    background: -moz-linear-gradient(45deg, rgba(175, 102, 102, 1) 0%, rgba(178, 37, 37, 1) 100%);
+    background: -webkit-linear-gradient(45deg, rgba(175, 102, 102, 1) 0%, rgba(178, 37, 37, 1) 100%);
+    background: linear-gradient(to bottom, rgba(175, 102, 102, 1) 0%, rgba(178, 37, 37, 1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#af6666', endColorstr='#b22525', GradientType=0);
+    border: 1px solid #8E1D1D;
+    color: #fff;
+    text-shadow: 0px 1px 1px rgba(0, 0, 0, .3);
+}
+
+.Button.Loading {
+    cursor: wait;
+}
+
+.Button.Loading:after {
+    content: "";
+    width: 10px;
+    height: 10px;
+    border: 2px solid rgba(0, 0, 0, .6);
+    border-radius: 50%;
+    border-top-color: #fff;
+    animation: spin 1s ease-in-out infinite;
+    -webkit-animation: spin 1s ease-in-out infinite;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -5px;
+    margin-top: -7px;
+    z-index: 2;
+}
+
+.Button.Loading:before {
+    background-color: rgba(255, 255, 255, .5);
+    z-index: 1;
+    position: absolute;
+    top: -1px;
+    right: -1px;
+    bottom: -1px;
+    left: -1px;
+    content: "";
+}
+
+@keyframes spin {
+    to {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+@-webkit-keyframes spin {
+    to {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+.Button.Disabled {
+    background: rgb(182, 182, 182);
+    padding: 6px 20px 8px 20px;
+    border: 1px solid #ccc;
+    color: rgb(131, 131, 131);
+    cursor: not-allowed;
+    opacity: 1;
+    text-shadow: 0px 1px 0px rgba(255, 255, 255, .5);
+}
+
+.Button.Small {
+    font-size: 11px;
+    padding: 4px 12px 6px 12px;
+}
+
+.Button.extraSmall {
+    font-size: 10px;
+    padding: 3px 8px 4px 8px;
+}
+
+
+.Button:focus {
+    outline: none;
+}
+
+.Button:focus {
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, .3), inset 0px -1px 0px rgba(0, 0, 0, .3), inset 0px 1px 0px rgba(255, 255, 255, .3);
+    opacity: 1;
+}
+
+.Button:hover {
+    opacity: 1;
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, .3), inset 0px -1px 0px rgba(0, 0, 0, .3), inset 0px 1px 0px rgba(255, 255, 255, .3);
+}
+
+
+.Button:active {
+    transform: translateY(1px);
+}
+.groupButton {
+    display: flex;
+}
+
+.groupButton>* {
+    width: 100%;
+    border-radius: 0;
+}
+
+.groupButton>*:first-child {
+    -webkit-border-top-left-radius: 3px;
+    -webkit-border-bottom-left-radius: 3px;
+    -moz-border-radius-topleft: 3px;
+    -moz-border-radius-bottomleft: 3px;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+}
+
+.groupButton>*:last-child {
+    -webkit-border-top-right-radius: 3px;
+    -webkit-border-bottom-right-radius: 3px;
+    -moz-border-radius-topright: 3px;
+    -moz-border-radius-bottomright: 3px;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+
+/**
+ * Efectos
+ */
+
+.Transition,
+.Button,
+.Input {
+    -webkit-transition: all 0.1s ease;
+    -moz-transition: all 0.1s ease;
+    -o-transition: all 0.1s ease;
+    -ms-transition: all 0.1s ease;
+    transition: all 0.1s ease;
+}
